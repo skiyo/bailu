@@ -17,6 +17,10 @@ class OauthWeiboCallbackHandler(tornado.web.RequestHandler):
 		pass
 
 
+class SpotHandler(tornado.web.RequestHandler):
+	def get(self, spot):
+		self.write(spot)
+
 class PageNotFoundHandler(tornado.web.RequestHandler):
 	def get(self):
 		print "PageNotFound"

@@ -8,5 +8,6 @@ controller = [
 	(r"/", handler.IndexHandler),
 	(r"/oauth/weibo", handler.OAuthWeiboHandler),
 	(r"/oauth/weibo_callback", handler.OauthWeiboCallbackHandler),
+	(r"/([^/]+)", handler.SpotHandler),
 	(r".*", handler.PageNotFoundHandler),
 ]
