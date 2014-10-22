@@ -16,10 +16,14 @@ class OauthWeiboCallbackHandler(tornado.web.RequestHandler):
 	def get(self):
 		pass
 
-
 class SpotHandler(tornado.web.RequestHandler):
 	def get(self, spot):
 		self.write(spot)
+
+class SugHandler(tornado.web.RequestHandler):
+	def get(self):
+		self.write("sug")
+
 
 class PageNotFoundHandler(tornado.web.RequestHandler):
 	def get(self):
