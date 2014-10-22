@@ -6,7 +6,6 @@ from whoosh.index import create_in, open_dir
 from whoosh.fields import *
 from whoosh.qparser import QueryParser
 from jieba.analyse import ChineseAnalyzer
-import encodeutf8
 
 reload(sys)
 sys.setdefaultencoding('utf-8')
