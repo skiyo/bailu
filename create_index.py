@@ -26,7 +26,7 @@ if __name__ == "__main__" :
     writer = ix.writer()
 
     for data in all_data:
-        writer.add_document(title=data["title"].strip() + u"\t" + data["address"].strip(), path=unicode(data["id"]), hot=int(data["hot"]))
+        writer.add_document(title=data["title"].strip() + u"\t" + data["address"].strip(), path=unicode(data["id"]), hot=(int(data["hot"])+int(data["comment_num"])*10))
 
     writer.commit()
 

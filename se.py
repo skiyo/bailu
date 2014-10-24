@@ -30,6 +30,7 @@ def search(query):
 
         ret["spot"].append({
             "id" : int(h["path"]),
+            "rank" : int(h["hot"]),
             "title" : h["title"].split("\t")[0],
             "address" : h["title"].split("\t")[1]
         })

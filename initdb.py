@@ -13,5 +13,7 @@ if __name__ == "__main__" :
 
     f = open('dict/spot', 'r')
     for line in open('dict/spot'):
-        (title, address) = f.readline().split("\t")
-        sql.query("INSERT INTO spot (title, address) VALUES('"+sql.escape(title)+"', '"+sql.escape(address)+"')")
+        (title, address, hot) = f.readline().split("\t")
+        if address == '-':
+        	address = ''
+        sql.query("INSERT INTO spot (title, address, hot) VALUES('"+sql.escape(title)+"', '"+sql.escape(address)+"', '"+sql.escape(hot)+"')")
