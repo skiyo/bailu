@@ -16,6 +16,11 @@ mysql.port = 3306
 mysql.db = 'bailu'
 mysql.charset = 'utf8'
 
+weibo = Bag()
+weibo.api_key = '3649416783'
+weibo.api_secret = '24843e6843b5a8319201991e5d0a4d75'
+weibo.redirect_url = 'http://127.0.0.1/oauth/weibo_callback'
+
 bailu = Bag()
 
 tornado_settings = dict(
